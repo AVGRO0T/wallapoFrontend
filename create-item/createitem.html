@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <head>
+        <h2> Añadir un nuevo producto</h2>
+    </head>
+    <section id="contact" class="content">
+        <div class="tittle_2">
+            <div class="title_text">
+                <h2 class="titles"> CONTACT </h2>
+            </div>
+        <div class="form">
+            <form class="form_item">
+                <div class="tag_dates">
+                    <div class="name">
+                        <label for="name" class="m-1"> Nombre (*) </label>
+                        <input type="text" id="name" class="m-1"name="name" required >
+                    </div>
+                    <div clas="price">
+                        <label for="price" class="m-1"> Precio (*) </label>
+                        <input type="number"class="m-1" id="price" name="price" required maxlength="9" minlength="9">
+                    </div>
+                </div>
+                <div class="radio">
+                    <p class="m-1"> ¿Compra o venta?</p>
+                    <div>
+                       
+                            <input type="radio" id="compra" name="status" value="compra" required>
+                            Compra
+                    </div>
+                    <div>
+                        
+                            <input type="radio" id="venta" name="status" value="venta" required>
+                            venta
+                    </div>
+                    <div class="description">
+                        <label for="description" class="m-1" >Descripción</label>
+                        <textarea name="description" id="description" cols="35" rows="5" maxlength="180" required></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit" id="save" name="save"> Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+</div>
+    </section>
+    <script type="module" src="createItem.js"></script>
+    <footer></footer>
+</body>
+</html>

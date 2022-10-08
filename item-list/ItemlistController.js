@@ -11,8 +11,8 @@ export class ItemlistController {
     }
   
     loadContainer () {
-        /* this.itemDetailElement.innerHTML = ListCommodityView(); */
-            pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR,'test')
+        this.itemDetailElement.innerHTML = ListCommodityView();
+          
        
         
         
