@@ -1,5 +1,5 @@
-import { pubSub } from "./pubSub";
-import { htmlNotification } from "./ShowNotification";
+import { pubSub } from "./pubSub.js";
+import { htmlNotification } from "./ShowNotification.js";
 export class NotificationsLoad {
 
     constructor(nodeElement){
@@ -10,15 +10,17 @@ export class NotificationsLoad {
     }
 
     suscribeNotification () {
-        pubSub.subscribe(pubSub.TOPICS.NOTIFICATION_ERROR, (warnings) => {
-            this.htmlNotification(warnings)
+        pubSub.subscribe(pubSub.TOPICS.NOTIFICATION_ERROR, (warning) => {
+            this.HtmlNotification(warning)
             })
-    }
-    htmlNotification(warnings) {
-        this.notificationsLoad.innerHTML = htmlNotification(warnings);
+    } 
+    HtmlNotification(warning) {
+        this.notificationsLoad.innerHTML = htmlNotification(warning);
         const closeButtonElement = this.notificationsLoad.querySelector('#closeNotification')
         closeButtonElement.addEventListener('click', () => {
-            document.getElementById('#showNotification').style.visibility = "visible";
+        const showNotification = this.notificationsLoad.querySelector('#showNotification')
+            showNotification.classList.add('div_hide') 
+            console.log(showNotification)
         }) 
-    }
+    } 
 }

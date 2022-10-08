@@ -1,6 +1,7 @@
 export const ListCommodityView = () => {
 
-    const Commodity =`
+    const Commodity = '';
+    /* `
     <div> 
     <article>
     <div>  <img>  </div>
@@ -11,7 +12,7 @@ export const ListCommodityView = () => {
     </article>
     
     </div>
-    `
+    ` */
           
     return Commodity;
     
