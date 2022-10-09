@@ -24,7 +24,7 @@
                     </div>
                     <div clas="price">
                         <label for="price" class="m-1"> Precio (*) </label>
-                        <input type="number"class="m-1" id="price" name="price" required maxlength="9" minlength="9">
+                        <input type="number"class="m-1" id="price" name="price" required>
                     </div>
                 </div>
                 <div class="radio">
@@ -43,6 +43,7 @@
                         <label for="description" class="m-1" >Descripción</label>
                         <textarea name="description" id="description" cols="35" rows="5" maxlength="180" required></textarea>
                     </div>
+                    <input type="file" id="seleccionArchivos" accept="image/*" required>
                     <div class="button">
                         <button type="submit" id="save" name="save"> Guardar</button>
                     </div>

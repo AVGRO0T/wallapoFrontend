@@ -5,6 +5,7 @@ class SparrestApi {
     login: '/auth/login',
     signup: '/auth/register',
     items: '/api/items',
+    files: '/upload'
   }
   constructor() {}
 

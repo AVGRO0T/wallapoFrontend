@@ -1,17 +1,16 @@
-export const ListCommodityView = () => {
+export const ListCommodityView = (items) => {
 
     const Commodity = 
      `
-    <div> 
+     <a href="http://localhost:8080/item-detail/itemDetail.html?id=${items.id} class="itemList"">
     <article>
-    <div>  <img>  </div>
-    <p> Usuario <p> 
-    <h3> ANUNCIO TEST </h3>
-    <p> precio </p>
-    <p> Descricion jejeje </p>
-    </article>
-    
-    </div>
+    <div>  <img src"${items.img}">  </div>
+    <h3>${items.name} </h3>
+    <p> ${items.price} </p>
+    <p> ${items.status} € <p> 
+    <p> ${items.description} </p>
+    </article> 
+    </a>
     `
           
     return Commodity;

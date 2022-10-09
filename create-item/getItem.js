@@ -1,8 +1,12 @@
 import { sparrestApi } from "../SparrestApi.js";
 
-export const createItem = (Items) => {
+export const createItem = (name, price, status, description, file) => {
 
     sparrestApi.post(sparrestApi.endpoints.items, {
-        content: Items
+        description: description,
+        name: name,
+        price: price,
+        status: status,
+        file: file
     })
 }

@@ -9,7 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const adListController = new ItemlistController(loadListElement);
     }
     
-    
-
-createAdElementsControllers();
+    const handleUserLogged = () => {
+        const token = localStorage.getItem('token')
+        const userActions = document.querySelector('#user-actions')
+        if (token) {
+          userActions.innerHTML = '<a href="./create-item/createitem.html">Añadir nuevo producto</a>'
+        } else {
+          userActions.innerHTML = '<a href="./create-user/user-form.html">Inicia sesión</a>'
+        }
+      }
+      createAdElementsControllers();
+      handleUserLogged ();
 })
