@@ -17,7 +17,7 @@ export class ItemlistController {
           items = await getItems();
         } catch (error) {
           // this.notificationController.showNotification(error)
-          pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'Error cargando productos')
+          pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'Error cargando articulos')
         }
     
         if (items.length === 0) {

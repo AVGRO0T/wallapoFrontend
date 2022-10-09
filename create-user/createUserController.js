@@ -54,10 +54,12 @@ export class SignupController {
   
       try {
         await createApiUser(username, password)
-        const jwt = await loginApiUser(username, password)
-        localStorage.setItem('token', jwt)
+        setTimeout(() => {
+          alert('Usuario creado');
+          window.location = '../index.html'
+        }, 100); 
       } catch (error) {
-        // la creación de usuario ha fallado
+        pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, `Error crear usuario`)
       }
     }
   }

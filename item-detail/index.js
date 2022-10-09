@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadListElement = document.querySelector('.detail-Item');
     const notificationsLoaded = document.querySelector ('.notifications')
     
-    const locationId = new URLSearchParams(location.search)
-    const itemid = locationId.get('id')
+    const params = new URLSearchParams(location.search)
+    const itemid = params.get('id')
     
-    const NotificationController = new NotificationsLoad (notificationsLoaded);
-
     const itemDetailController = new ItemDetailController (loadListElement);
+    itemDetailController.drawItemDetail(itemid)
+    const NotificationController = new NotificationsLoad (notificationsLoaded);
     
     
       

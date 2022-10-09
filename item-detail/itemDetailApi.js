@@ -1,8 +1,8 @@
 import { sparrestApi } from "../SparrestApi.js";
 
 export const getItemId = async (itemsId) => {
-    const items = await sparrestApi.get(`${sparrestApi.endpoints.items}/${itemsId}?_expand=userid`)
-  
+    const items = await sparrestApi.get(`${sparrestApi.endpoints.items}/${itemsId}?_expand=user`)
+    
     return items;
   }
   

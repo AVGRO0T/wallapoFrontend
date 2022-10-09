@@ -16,7 +16,10 @@ export class CreaItemController {
         })
         createItemButton.addEventListener('click', () => {
           this.createItem()
-          
+          setTimeout(() => {
+            alert('Articulo creado');
+            window.location = '../index.html'
+          }, 100); 
         })
       }
     

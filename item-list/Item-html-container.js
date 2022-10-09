@@ -2,7 +2,7 @@ export const ListCommodityView = (items) => {
 
     const Commodity = 
      `
-     <a href="http://localhost:8080/item-detail/itemDetail.html?id=${items.id} class="itemList"">
+     <a href="http://localhost:8080/item-detail/itemDetail.html?id=${items.id} ">
     <article>
     <div>  <img src"${items.img}">  </div>
     <h3>${items.name} </h3>

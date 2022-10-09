@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (token) {
           userActions.innerHTML = '<a href="./create-item/createitem.html">Añadir nuevo producto</a>'
         } else {
-          userActions.innerHTML = '<a href="./create-user/user-form.html">Inicia sesión</a>'
+          userActions.innerHTML = '<a href="./user-login/user-form.html">Inicia sesión</a> <br> <a href="./create-user/user-form.html">Registrarse</a>'
         }
       }
       createAdElementsControllers();

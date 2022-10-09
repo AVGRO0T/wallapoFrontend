@@ -6,7 +6,7 @@ export const itemDetailhtml = (items) => {
     <p> ${items.price} </p>
     <p> ${items.status} € <p> 
     <p> ${items.description} </p>
-    <button style="display: none"> Eliminar produucto </button>
+    <button> Eliminar producto </button>
     </article> 
     `
     return Detail;
